@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: hsl(224, 32%, 9%);
+}
+
+.App {
+    max-width: 1200px;
+    color: #fff;
+    margin: 30px auto;
+    padding: 0 15px;
+    font-family: 'Inter';
+  }
+  
+  .container {
+    margin: 0 70px;
+  }
+
+  /* MOVIES */
+  
+  .popular-movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .section-title {
+    color: hsl(223, 36%, 84%);
+    height: 100%;
+    margin: 35px 0;
+  }
+  
+  /* MOVIE */
+  
+  .movie {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .movie:hover {
+    box-shadow: 0px 0px 24px 0px hsl(223, 36%, 36%);
+  }
+  
+  .movie .shadow {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  .movie h2 {
+    margin: 15px 10px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+  }
+  
+  .movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .movie svg {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0.6;
+  }
+  
+  .movie svg:hover {
+    opacity: 1;
+  }
+  
+  /* MOVIE DETAILS */
+  
+  .back {
+    height: max-content;
+    margin-top: 10px;
+    width: 55px;
+    position: fixed;
+    top: 20px;
+    background-color: hsl(223, 36%, 14%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  
+  .back svg {
+    font-size: 20px;
+    cursor: pointer;
+    color: hsl(221, 23%, 73%);
+  }
+  
+  .back svg:hover {
+    opacity: 0.7;
+  }
+  
+  .back svg.active {
+    color: #fff;
+  }
+  
+  .img-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+    opacity: 0.1;
+    object-fit: cover;
+  }
+  
+  .details h4 {
+    margin: 0;
+    color: hsl(223, 36%, 92%);
+  }
+  
+  .details ul {
+    padding: 0;
+    list-style: none;
+    color: hsl(223, 36%, 82%);
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .details p {
+    color: hsl(223, 36%, 82%);
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+  
+  .details a {
+    text-decoration: none;
+    color: hsl(223, 36%, 75%);
+  }
+  
+  .details a:hover {
+    opacity: 0.7;
+  }
+  
+  #rate {
+    color: yellow;
+  
+    border-radius: 15px;
+    width: max-content;
+  }
+  #rate svg {
+    margin-right: 5px;
+  }
